@@ -41,11 +41,11 @@
                                 <img src="/img/logo.svg" alt="Logo">
                             </a>
 
-                            <div class="ml-4">
-                                <div class="d-block p-0" style="font-size:32px">
+                            <div class="ml-2">
+                                <div class="d-block p-0" style="font-size:32px;margin-bottom:-6px">
                                     ITlympics
                                 </div>
-                                <small class="p-0">
+                                <small class="p-0" style="margin-top:-6px;">
                                     Team Packet
                                 </small>
                             </div>
@@ -60,17 +60,21 @@
                 </div>
             </navbar>
 
-            <sidebar :open="menuOpen">
-                <ul>
-                    <li>
-                        <a href="#">Home</a>
+            <sidebar :open="menuOpen" class="pt-4">
+                <ul class="navbar-nav">
+                    <li class="nav-item px-5 py-2">
+                        <a href="/" class="nav-link">Home</a>
                     </li>
-                    <li>
-                        <a href="#">Home</a>
+                    <li class="nav-item px-5 py-2">
+                        <a href="/" class="nav-link">Home</a>
                     </li>
-                    <li>
-                        <a href="#">Home</a>
+                    <li class="nav-item px-5 py-2">
+                        <a href="/" class="nav-link">Home</a>
                     </li>
+                    <li class="nav-item px-5 py-2">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+
                 </ul>
             </sidebar>
 
