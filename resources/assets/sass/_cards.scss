@@ -1,0 +1,29 @@
+.card {
+  box-shadow: 0 4px 16px #ddd;
+  border: 0;
+  background-color: white;
+  overflow: hidden;
+
+  &__image {
+      max-height: 300px;
+  }
+
+  &__tags {
+    .tag {
+      &::before {
+        $size: 8px;
+        content: '';
+        height: $size;
+        width: $size;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 8px;
+        margin: auto;
+        background-color: $color-white;
+        border-radius: 100%;
+        box-shadow: 0 0 1px $color-black inset
+      }
+    }
+  }
+}

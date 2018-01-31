@@ -6,24 +6,23 @@
 @import "colors";
 @import "menu_icon";
 @import "anchors";
+@import "cards";
 
 html,
 body {
   overflow-x: hidden;
   font-family: $default-font;
-}
-
-#app {
-  min-height: 100vh;
+  background-color: #f0f0f0
 }
 
 #header,
 #sidebar {
+  background-color: white;
 }
 
 #header {
-  z-index: -10;
-  box-shadow: 0 0 64px 0 #bbb;
+  z-index: 20;
+  box-shadow: 0 0 64px 0 $color-light-grey;
 
   .navbar-brand {
     img {
@@ -33,6 +32,13 @@ body {
 }
 
 #sidebar {
-  z-index: 20;
-  box-shadow: -64px 0 64px -64px #bbb;
+  z-index: 10;
+  box-shadow: -64px 0 64px -64px $color-light-grey;
+}
+
+#app {
+    min-height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 128px;
 }
