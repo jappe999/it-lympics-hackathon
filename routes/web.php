@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -24,3 +25,6 @@ Route::get('/datetype', 'datetypeController@index')->name('datetype');
 
 // route for api
 Route::get('/api', 'apiController@index')->name('api');
+
+
+
