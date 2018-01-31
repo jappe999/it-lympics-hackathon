@@ -63,19 +63,23 @@
             <sidebar :open="menuOpen">
                 <ul>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="/gallery">Gallery</a>
                     </li>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="/datetype">Datetype</a>
+                    </li>
+                    <li>
+                        <a href="/api">Api</a>
                     </li>
                 </ul>
             </sidebar>
 
 
             @yield('app')
+            @include('layouts.footer')
         </div>
 
         <script src="/js/app.js" charset="utf-8"></script>
