@@ -65,6 +65,8 @@
 
         <div id="app">
             @yield('app')
+
+            @include('layouts.footer')
         </div>
 
         <script src="/js/app.js" charset="utf-8"></script>
