@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// route for the gallery
+Route::get('/gallery', 'galleryController@index')->name('gallery');
+
+// route for the gallery
+Route::get('/datetype', 'datetypeController@index')->name('datetype');
+
+
+// route for api
+Route::get('/api', 'apiController@index')->name('api');
