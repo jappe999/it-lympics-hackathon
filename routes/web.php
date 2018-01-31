@@ -24,7 +24,7 @@ Route::get('/datetype', 'datetypeController@index')->name('datetype');
 
 
 // route for api
-Route::get('/api', 'apiController@index')->name('api');
+//Route::get('/api', 'apiController@index')->name('api');
 
 
-
+Route::get('/api', 'TwitterController@getAll');

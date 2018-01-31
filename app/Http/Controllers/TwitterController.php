@@ -8,7 +8,7 @@ use App\Services\Codebird;
 class TwitterController extends Controller
 {
     private $twitter;
-
+    private $tweet;
     public function __construct()
     {
         Codebird::setConsumerKey(env('TWITTER_PUBLIC', 'null'), env('TWITTER_PRIVATE', 'null'));
@@ -20,4 +20,10 @@ class TwitterController extends Controller
     {
         return (array) $this->twitter->search_tweets('q=ITlympics', true);
     }
+
+//    public function getTweets()
+//    {
+//        $tweet = $this->twitter->search_tweets('q=ITlympics', true);
+//
+//    }
 }
