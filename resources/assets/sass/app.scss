@@ -3,11 +3,14 @@
 
 // Variables
 @import "variables";
+@import "colors";
 @import "menu_icon";
+@import "anchors";
 
 html,
 body {
   overflow-x: hidden;
+  font-family: $default-font;
 }
 
 #app {
@@ -19,8 +22,8 @@ body {
 }
 
 #header {
-  z-index: 10;
-  box-shadow: 0 0 4px #aaa;
+  z-index: -10;
+  box-shadow: 0 0 64px 0 #bbb;
 
   .navbar-brand {
     img {
@@ -30,6 +33,6 @@ body {
 }
 
 #sidebar {
-  z-index: 1;
-  box-shadow: 0 4px 4px #9b9b9b;
+  z-index: 20;
+  box-shadow: -64px 0 64px -64px #bbb;
 }

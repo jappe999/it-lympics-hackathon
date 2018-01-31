@@ -9,21 +9,25 @@
     <body>
         <div id="app">
             <navbar id="header" :open="menuOpen">
-                <div class="navbar box-shadow">
-                    <div class="container d-flex justify-content-between">
+                <div class="navbar px-0 py-0 py-md-2">
+                    <div class="container px-4 px-sm-5 d-flex justify-content-between">
                         <div class="d-flex flex-row justify-content-between">
-                            <a href="/" class="navbar-brand d-flex align-items-center">
-                                <img src="/img/logo.svg" alt="Logo">
+                            <a href="/" class="navbar-brand mx-0 d-flex align-items-center p-0">
+                                <img src="/img/logo.svg" alt="Logo" class="h-75">
                             </a>
 
-                            <div class="ml-2 my-auto">
-                                <strong class="d-block m-0 p-0 font-4 line-height-0">
+                            <div class="ml-4 my-auto d-none d-md-block">
+                                <strong class="d-block m-0 p-0 font-1 line-height-0">
                                     IT-Lympics
                                 </strong>
                                 <small class="m-0 p-0 line-height-0">
                                     Team Packet
                                 </small>
                             </div>
+                        </div>
+
+                        <div class="mr-3 d-block d-md-none">
+                          Team Packet
                         </div>
 
                         <div>
@@ -42,6 +46,17 @@
             </navbar>
 
             <sidebar :open="menuOpen" class="pt-4 d-md-none">
+                <div class="px-5 py-3 my-auto">
+                    <a href="/about" class="color-black">
+                        <strong class="d-block m-0 p-0 font-4 line-height-0">
+                            IT-Lympics
+                        </strong>
+                        <small class="m-0 p-0 line-height-0">
+                            Team Packet
+                        </small>
+                    </a>
+                </div>
+
                 @include('layouts.navigation', [ 'direction' => 'column' ])
             </sidebar>
 

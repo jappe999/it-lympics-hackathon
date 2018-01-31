@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);.font-0 {
+@import url(https://fonts.googleapis.com/css?family=Roboto);.font-0 {
   font-size: 1em;
 }
 
@@ -86,9 +86,13 @@
   line-height: 3em;
 }
 
+.color-black {
+  color: black;
+}
+
 .menuicon {
   height: 36px;
-  width: 36px;
+  width: 40px;
   position: relative;
   background: transparent;
   border: 0;
@@ -97,7 +101,7 @@
 
 .menuicon__lines {
   height: 20px;
-  width: 36px;
+  width: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -133,9 +137,21 @@
   bottom: 0;
 }
 
+a {
+  font-family: "Roboto", sans-serif;
+  color: #142d89;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
 html,
 body {
   overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
 }
 
 #app {
@@ -143,9 +159,9 @@ body {
 }
 
 #header {
-  z-index: 10;
-  -webkit-box-shadow: 0 0 4px #aaa;
-          box-shadow: 0 0 4px #aaa;
+  z-index: -10;
+  -webkit-box-shadow: 0 0 64px 0 #bbb;
+          box-shadow: 0 0 64px 0 #bbb;
 }
 
 #header .navbar-brand img {
@@ -153,8 +169,8 @@ body {
 }
 
 #sidebar {
-  z-index: 1;
-  -webkit-box-shadow: 0 4px 4px #9b9b9b;
-          box-shadow: 0 4px 4px #9b9b9b;
+  z-index: 20;
+  -webkit-box-shadow: -64px 0 64px -64px #bbb;
+          box-shadow: -64px 0 64px -64px #bbb;
 }
 
