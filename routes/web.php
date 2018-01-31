@@ -25,10 +25,14 @@ Route::get('/RudyIsEenHeld', 'galleryController@theLegend')->name('theLegend');
 
 //Route::get('/api', 'apiController@index')->name('api');
 
-// routes for talking with api
-Route::get('/api', 'TwitterController@getAll')->name('api');
-Route::get('/api/twitter/all', 'TwitterController@showTweets')->name('apiAll');
-Route::get('/api/twitter/search', 'TwitterController@searchAll')->name('apiSearch');
+// routes for talking with twitter api
+Route::get('/twitter', 'TwitterController@getAll')->name('twitter');
+Route::get('/twitter/all', 'TwitterController@showTweets')->name('twitterAll');
+Route::get('/twitter/search', 'TwitterController@searchAll')->name('twitterSearch');
+
+Route::get('/instagram', 'instagramController@getAll')->name('instagram');
+Route::get('/instagram/all', 'instagramController@showTweets')->name('instagramAll');
+Route::get('/instagram/search', 'instagramController@searchAll')->name('instagramSearch');
 
 Route::get('/', function () {
     return view('home');
