@@ -1,9 +1,35 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 // Variables
 @import "variables";
+@import "menu_icon";
 
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+html,
+body {
+  overflow-x: hidden;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+#header,
+#sidebar {
+}
+
+#header {
+  z-index: 10;
+  box-shadow: 0 0 4px #aaa;
+
+  .navbar-brand {
+    img {
+      max-height: 64px;
+    }
+  }
+}
+
+#sidebar {
+  z-index: 1;
+  box-shadow: 0 4px 4px #9b9b9b;
+}
