@@ -10,8 +10,9 @@ const app = new Vue({
       getFeed() {
         axios.get('/api/twitter/all')
         .then(response => {
-          console.log(response.data)
-          this.feed = this.parseFeed(response.data)
+          if (response.data) {
+            this.feed = this.parseFeed(response.data)
+          }
         })
         .catch(err => {
           console.error(err)

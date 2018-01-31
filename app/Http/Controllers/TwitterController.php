@@ -26,8 +26,8 @@ class TwitterController extends Controller
     public function showTweets()
     {
         //query to see all tweets
-        $tweet = (array) $this->twitter->search_tweets('q=ITlympics'|| 'q=it-lympics' || 'q=Itlympics', true);
-        
+        $tweet = (array) $this->twitter->search_tweets('q=ITlympics+it-lympics+Itlympics', true);
+
     }
     public function searchAll()
     {

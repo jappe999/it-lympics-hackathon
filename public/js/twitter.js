@@ -90,8 +90,9 @@ var app = new Vue({
       var _this = this;
 
       axios.get('/api/twitter/all').then(function (response) {
-        console.log(response.data);
-        _this.feed = _this.parseFeed(response.data);
+        if (response.data) {
+          _this.feed = _this.parseFeed(response.data);
+        }
       }).catch(function (err) {
         console.error(err);
       });

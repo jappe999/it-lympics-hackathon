@@ -6,6 +6,7 @@
 
 @section('app')
 
+
 <form action="{{route('apiAll')}}">
     {{csrf_field()}}
     <input type="submit" class="btn-primary" value="See all tweets">
@@ -19,9 +20,9 @@
 </form>
 
 
+
     <!-- This is where the tweets and Instagram photos eventually appear. -->
     <div class="col-sm-8 col-md-6 mt-5 mx-auto" id="feed">
-        <card :card="card" v-for="card of feed"></card>
+        <card :key="card.id" :card="card" v-for="card of feed"></card>
     </div>
 @endsection
-

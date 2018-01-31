@@ -47,7 +47,7 @@
                 </div>
             </navbar>
 
-<<<<<<< HEAD
+
             <sidebar :open="menuOpen">
                 <ul>
                     <li>
@@ -64,6 +64,7 @@
                     </li>
                 </ul>
             </sidebar>
+
 
             <sidebar :open="menuOpen" class="pt-4 d-md-none">
                 <div class="px-5 py-3 my-auto">
@@ -84,6 +85,7 @@
 
         <div id="app">
             @yield('app')
+
             @include('layouts.footer')
         </div>
 
