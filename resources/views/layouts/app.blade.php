@@ -2,64 +2,52 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Onze app</title>
+        <title>{{ config('app.name') }}</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-        <div id="app">
-            <navbar id="header" :open="menuOpen">
-                <div class="collapse">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-8 col-md-7 py-4">
-                                <h4 class="text-white">About</h4>
-                                <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-                            </div>
-                            <div class="col-sm-4 offset-md-1 py-4">
-                                <h4 class="text-white">Contact</h4>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#" class="text-white">Follow on Twitter</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="text-white">Like on Facebook</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="text-white">Email me</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="navbar box-shadow">
-                    <div class="container d-flex justify-content-between">
+        <div id="navigation">
+            <navbar id="header" :open="menuOpen" class="position-fixed w-100">
+                <div class="navbar px-0 py-0 py-md-2">
+                    <div class="container-fluid px-4 px-sm-5 d-flex justify-content-between">
                         <div class="d-flex flex-row justify-content-between">
-                            <a href="/" class="navbar-brand d-flex align-items-center">
-                                <img src="/img/logo.svg" alt="Logo">
-                            </a>
-
-                            <div class="ml-4">
-                                <div class="d-block p-0" style="font-size:32px">
-                                    ITlympics
+                            <a href="/" class="d-flex flex-row color-black">
+                                <div class="navbar-brand mx-0 d-flex align-items-center p-0">
+                                    <img src="/img/logo.svg" alt="Logo" class="h-75">
                                 </div>
-                                <small class="p-0">
-                                    Team Packet
-                                </small>
-                            </div>
+
+                                <div class="ml-2 my-auto d-none d-md-block">
+                                    <strong class="d-block m-0 mt-1 p-0 font-1 line-height-0">
+                                        IT-Lympics
+                                    </strong>
+                                    <small class="m-0 p-0 line-height-0">
+                                        Team Packet
+                                    </small>
+                                </div>
+                            </a>
                         </div>
 
-                        <button class="menuicon" type="button" @click="toggleMenu()" aria-expanded="false" aria-label="Toggle navigation">
-                            <div class="menuicon__lines">
-                                <div class="menuicon__lines__line"></div>
+                        <div class="mr-3 d-block d-md-none">
+                          Team Packet
+                        </div>
+
+                        <div>
+                            <div class="d-none d-md-flex flex-row justify-content-between">
+                                @include('layouts.navigation', [ 'direction' => 'row' ])
                             </div>
-                        </button>
+
+                            <button class="menuicon d-block d-md-none" type="button" @click="toggleMenu()" aria-expanded="false" aria-label="Toggle navigation">
+                                <div class="menuicon__lines">
+                                    <div class="menuicon__lines__line"></div>
+                                </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </navbar>
 
+<<<<<<< HEAD
             <sidebar :open="menuOpen">
                 <ul>
                     <li>
@@ -77,11 +65,29 @@
                 </ul>
             </sidebar>
 
+            <sidebar :open="menuOpen" class="pt-4 d-md-none">
+                <div class="px-5 py-3 my-auto">
+                    <a href="/about" class="color-black">
+                        <strong class="d-block m-0 p-0 font-4 line-height-0">
+                            IT-Lympics
+                        </strong>
+                        <small class="m-0 p-0 line-height-0">
+                            Team Packet
+                        </small>
+                    </a>
+                </div>
 
+
+                @include('layouts.navigation', [ 'direction' => 'column' ])
+            </sidebar>
+        </div>
+
+        <div id="app">
             @yield('app')
             @include('layouts.footer')
         </div>
 
         <script src="/js/app.js" charset="utf-8"></script>
+        @yield('scripts')
     </body>
 </html>

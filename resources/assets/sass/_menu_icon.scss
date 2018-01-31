@@ -5,15 +5,15 @@
   $color: #222;
 
   height: $width;
-  width: $width;
+  width: $width + $padding-y;
   position: relative;
   background: transparent;
   border: 0;
-  padding: 0;
+  padding: 4px;
 
   &__lines {
     height: $height * 2 + $padding-y * 4;
-    width: $width;
+    width: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
