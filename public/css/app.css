@@ -1,4 +1,92 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);.menuicon {
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);.font-0 {
+  font-size: 1em;
+}
+
+.font-1 {
+  font-size: 1.2em;
+}
+
+.font-2 {
+  font-size: 1.4em;
+}
+
+.font-3 {
+  font-size: 1.6em;
+}
+
+.font-4 {
+  font-size: 1.8em;
+}
+
+.font-5 {
+  font-size: 2em;
+}
+
+.font-6 {
+  font-size: 2.2em;
+}
+
+.font-7 {
+  font-size: 2.4em;
+}
+
+.font-8 {
+  font-size: 2.6em;
+}
+
+.font-9 {
+  font-size: 2.8em;
+}
+
+.font-10 {
+  font-size: 3em;
+}
+
+.line-height-0 {
+  line-height: 1em;
+}
+
+.line-height-1 {
+  line-height: 1.2em;
+}
+
+.line-height-2 {
+  line-height: 1.4em;
+}
+
+.line-height-3 {
+  line-height: 1.6em;
+}
+
+.line-height-4 {
+  line-height: 1.8em;
+}
+
+.line-height-5 {
+  line-height: 2em;
+}
+
+.line-height-6 {
+  line-height: 2.2em;
+}
+
+.line-height-7 {
+  line-height: 2.4em;
+}
+
+.line-height-8 {
+  line-height: 2.6em;
+}
+
+.line-height-9 {
+  line-height: 2.8em;
+}
+
+.line-height-10 {
+  line-height: 3em;
+}
+
+.menuicon {
   height: 36px;
   width: 36px;
   position: relative;

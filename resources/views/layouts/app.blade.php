@@ -9,31 +9,6 @@
     <body>
         <div id="app">
             <navbar id="header" :open="menuOpen">
-                <div class="collapse">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-8 col-md-7 py-4">
-                                <h4 class="text-white">About</h4>
-                                <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-                            </div>
-                            <div class="col-sm-4 offset-md-1 py-4">
-                                <h4 class="text-white">Contact</h4>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#" class="text-white">Follow on Twitter</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="text-white">Like on Facebook</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="text-white">Email me</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="navbar box-shadow">
                     <div class="container d-flex justify-content-between">
                         <div class="d-flex flex-row justify-content-between">
@@ -41,41 +16,33 @@
                                 <img src="/img/logo.svg" alt="Logo">
                             </a>
 
-                            <div class="ml-2">
-                                <div class="d-block p-0" style="font-size:32px;margin-bottom:-6px">
-                                    ITlympics
-                                </div>
-                                <small class="p-0" style="margin-top:-6px;">
+                            <div class="ml-2 my-auto">
+                                <strong class="d-block m-0 p-0 font-4 line-height-0">
+                                    IT-Lympics
+                                </strong>
+                                <small class="m-0 p-0 line-height-0">
                                     Team Packet
                                 </small>
                             </div>
                         </div>
 
-                        <button class="menuicon" type="button" @click="toggleMenu()" aria-expanded="false" aria-label="Toggle navigation">
-                            <div class="menuicon__lines">
-                                <div class="menuicon__lines__line"></div>
+                        <div>
+                            <div class="d-none d-md-flex flex-row justify-content-between">
+                                @include('layouts.navigation', [ 'direction' => 'row' ])
                             </div>
-                        </button>
+
+                            <button class="menuicon d-block d-md-none" type="button" @click="toggleMenu()" aria-expanded="false" aria-label="Toggle navigation">
+                                <div class="menuicon__lines">
+                                    <div class="menuicon__lines__line"></div>
+                                </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </navbar>
 
-            <sidebar :open="menuOpen" class="pt-4">
-                <ul class="navbar-nav">
-                    <li class="nav-item px-5 py-2">
-                        <a href="/" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item px-5 py-2">
-                        <a href="/" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item px-5 py-2">
-                        <a href="/" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item px-5 py-2">
-                        <a href="/" class="nav-link">Home</a>
-                    </li>
-
-                </ul>
+            <sidebar :open="menuOpen" class="pt-4 d-md-none">
+                @include('layouts.navigation', [ 'direction' => 'column' ])
             </sidebar>
 
 
