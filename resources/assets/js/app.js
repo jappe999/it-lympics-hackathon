@@ -10,24 +10,10 @@ const navigation = new Vue({
     el: '#navigation',
     data: {
       menuOpen: false,
-      feed: [],
-    },
-    mounted() {
-      this.getFeed()
     },
     methods: {
       toggleMenu() {
         this.menuOpen = !this.menuOpen
-      },
-      getFeed() {
-        axios.get('/api/twitter/all')
-        .then(response => {
-          console.log(response.data)
-          this.feed = response.data
-        })
-        .catch(err => {
-          console.error(err)
-        })
       }
     }
 })

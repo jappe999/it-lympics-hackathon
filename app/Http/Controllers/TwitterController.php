@@ -10,6 +10,21 @@ class TwitterController extends Controller
     private $twitter;
     private $tweet;
 
+    private $tags = [
+        'itlympics',
+        'it-lympics',
+        '#almere',
+        '@almere',
+        '#windesheimflevoland',
+        '#floriade',
+        '@ggcAlmere',
+        '@vba_almere',
+    ];
+
+    private $filters = [
+        '',
+    ];
+
     public function __construct()
     {
         Codebird::setConsumerKey(env('TWITTER_PUBLIC', 'null'), env('TWITTER_PRIVATE', 'null'));
@@ -17,16 +32,39 @@ class TwitterController extends Controller
         $this->twitter = Codebird::getInstance();
     }
 
-    public function getAll()
+    private function getTags()
     {
-        return (array) $this->twitter->search_tweets('q=ITlympics', true);
+        $tags = [];
+        $filters = implode(' ', $this->filters);
+
+        foreach ($this->tags as $tag) {
+            $tags[] = "$tag $filters";
+        }
+
+        return $tags;
+    }
+
+    public function query()
+    {
+        $queries = [];
+
+        foreach ($_GET as $key => $query) {
+            $queries[] = "$key=$query";
+        }
+
+        $query = implode('&', $queries);
+
+        return (array) $this->twitter->search_tweets("$query&tweet_mode=extended", true);
 
     }
 
     public function showTweets()
     {
-        //query to see all tweets
-        $tweet = (array) $this->twitter->search_tweets('q=ITlympics+it-lympics+Itlympics', true);
+        // Query to see all tweets that match the tags.
+        $query = implode(' OR ', $this->tags);
+        $query = urlencode($query);
+
+        return (array) $this->twitter->search_tweets("q=$query&tweet_mode=extended", true);
 
     }
     public function searchAll()

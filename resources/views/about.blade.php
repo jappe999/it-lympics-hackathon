@@ -42,7 +42,7 @@
         <card :card="{ 'image': '/img/about.jpg' }">
             <div class="col-12 px-5 py-4">
                 <h2>Het team</h2>
-                <p>Wie zijn wij?</p>
+                <p></p>
             </div>
         </card>
     </div>

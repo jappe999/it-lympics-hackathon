@@ -1400,26 +1400,11 @@ Vue.component('card', __webpack_require__(50));
 var navigation = new Vue({
   el: '#navigation',
   data: {
-    menuOpen: false,
-    feed: []
+    menuOpen: false
   },
-  mounted: function mounted() {
-    this.getFeed();
-  },
-
   methods: {
     toggleMenu: function toggleMenu() {
       this.menuOpen = !this.menuOpen;
-    },
-    getFeed: function getFeed() {
-      var _this = this;
-
-      axios.get('/api/twitter/all').then(function (response) {
-        console.log(response.data);
-        _this.feed = response.data;
-      }).catch(function (err) {
-        console.error(err);
-      });
     }
   }
 });
@@ -43668,7 +43653,7 @@ exports = module.exports = __webpack_require__(10)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -43679,6 +43664,10 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", 
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
 //
 //
 //
@@ -43740,12 +43729,20 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "tag position-relative bg-dark-blue color-white pr-3 pl-4 py-1 rounded"
+                    "tag position-relative bg-dark-blue color-white ml-2 mt-2 pr-3 pl-4 py-1 rounded"
                 },
                 [_vm._v("\n            " + _vm._s(tag.text) + "\n        ")]
               )
             })
           )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.card.url
+        ? _c("div", { staticClass: "float-right px-5" }, [
+            _c("a", { attrs: { href: _vm.card.url } }, [
+              _vm._v("Bekijk originele tweet")
+            ])
+          ])
         : _vm._e(),
       _vm._v(" "),
       _vm._t("default")
