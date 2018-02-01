@@ -1,7 +1,7 @@
 @extends('layouts.app')
 <title>Packet</title>
 @section('scripts')
-    <script src="/js/twitter.js" charset="utf-8"></script>
+    <script src="/js/instagram.js" charset="utf-8"></script>
 @endsection
 
 @section('app')

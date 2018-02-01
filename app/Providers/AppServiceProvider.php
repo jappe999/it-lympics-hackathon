@@ -13,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if (in_array(env('DB_HOST'), ['mariadb.clow.nl', 'database.clow.nl'])) {
+        	\URL::forceScheme('https');
+        }
     }
 
     /**
