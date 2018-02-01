@@ -19,10 +19,7 @@ class InstagramController extends Controller
 
     public function __construct()
     {
-        $this->instagram = new Instagram([
-            'client_id' => env('INSTAGRAM_PUBLIC'),
-            'client_secret' => env('INSTAGRAM_PRIVATE')
-        ]);
+        $this->instagram = new Instagram(env('INSTAGRAM_PUBLIC'));
     }
 
     public function query()
@@ -43,8 +40,12 @@ class InstagramController extends Controller
         $tagFeed = [];
         $userFeed = [];
 
-        for ($this->tags as $tag) {
+        return (array) $this->instagram->getTagMedia($this->tags[0]);
+
+        foreach ($this->tags as $tag) {
             $tagFeed = array_merge($tagFeed, json_encode($this->instagram->getTagMedia($tag))['data']);
         }
+
+        return $tagFeed;
     }
 }

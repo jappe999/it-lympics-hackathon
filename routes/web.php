@@ -22,6 +22,6 @@ Route::get('/api/twitter', 'TwitterController@query')->name('api');
 Route::get('/api/twitter/all', 'TwitterController@showTweets')->name('apiAll');
 Route::get('/api/twitter/search', 'TwitterController@searchAll')->name('apiSearch');
 
-Route::get('/api/instagram', 'instagramController@getAll')->name('instagram');
-Route::get('/api/instagram/all', 'instagramController@showTweets')->name('instagramAll');
-Route::get('/api/instagram/search', 'instagramController@searchAll')->name('instagramSearch');
+Route::get('/api/instagram', 'InstagramController@getAll')->name('instagram');
+Route::get('/api/instagram/all', 'InstagramController@showTweets')->name('instagramAll');
+Route::get('/api/instagram/search', 'InstagramController@searchAll')->name('instagramSearch');
