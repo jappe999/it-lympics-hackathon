@@ -11,8 +11,8 @@ class TwitterController extends Controller
     private $tweet;
 
     private $tags = [
-        'itlympics',
-        'it-lympics',
+        '#itlympics',
+        '#it-lympics',
         '#almere',
         '@almere',
         '#windesheimflevoland',
