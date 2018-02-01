@@ -86,6 +86,7 @@ var app = new Vue({
   el: '#app',
   data: {
     loading: false,
+    watcher: null,
     feed: [],
     next_url: ''
   },
@@ -96,10 +97,10 @@ var app = new Vue({
   methods: {
     watchBottom: function watchBottom() {
       var endFeed = document.getElementById('endfeed');
-      var watcher = __WEBPACK_IMPORTED_MODULE_0_scrollmonitor___default.a.create(endFeed);
+      this.watcher = __WEBPACK_IMPORTED_MODULE_0_scrollmonitor___default.a.create(endFeed);
       var vm = this;
 
-      watcher.enterViewport(function () {
+      this.watcher.enterViewport(function () {
         if (!vm.loading) {
           vm.getFeed();
         }
@@ -124,6 +125,7 @@ var app = new Vue({
           }
 
           _this.parseFeed(response.data);
+          _this.watcher.recalculateLocation();
         }
 
         _this.loading = false;

@@ -4,6 +4,7 @@ const app = new Vue({
     el: '#app',
     data: {
       loading: false,
+      watcher: null,
       feed: [],
       next_url: ''
     },
@@ -13,10 +14,10 @@ const app = new Vue({
     methods: {
       watchBottom() {
         let endFeed = document.getElementById('endfeed')
-        let watcher = scrollMonitor.create(endFeed)
+        this.watcher = scrollMonitor.create(endFeed)
         let vm = this
 
-        watcher.enterViewport(function () {
+        this.watcher.enterViewport(function () {
           if (!vm.loading) {
             vm.getFeed()
           }
@@ -40,6 +41,7 @@ const app = new Vue({
             }
 
             this.parseFeed(response.data)
+            this.watcher.recalculateLocation()
           }
 
           this.loading = false
