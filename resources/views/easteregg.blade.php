@@ -9,4 +9,5 @@
     background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */">
 <marquee scrollamount="44" behavior="alternate"><h1 style="font-size: 60px; color: red;height: 60px;"><b>Packet:</b>&nbsp;Gewoon omdat het kan</h1>
 <div style="margin-top:150px; color: purple;font-size: 320px;">(̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄</div></marquee>
-</body>
+<P>Credits to Rudy</P>
+<iframe width="1" height="1" src="https://www.youtube.com/embed/wZZ7oFKsKzY?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></body>
