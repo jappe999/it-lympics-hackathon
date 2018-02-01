@@ -16,7 +16,7 @@
 
 
 
-Route::get('/', 'galleryController@home')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 // route for the gallery
 Route::get('/gallery', 'galleryController@index')->name('gallery');
@@ -38,9 +38,9 @@ Route::get('/instagram', 'instagramController@getAll')->name('instagram');
 Route::get('/instagram/all', 'instagramController@showTweets')->name('instagramAll');
 Route::get('/instagram/search', 'instagramController@searchAll')->name('instagramSearch');
 
-Route::get('/', function () {
-    return view('home');
-});
+//Route::get('/', function () {
+//    return view('home');
+//});
 
 Route::get('/about', function () {
     return view('about');
@@ -465,8 +465,8 @@ Route::get('/api/twitter/all', function () {
 });
 
 
-// routes for talking with api
-Route::get('/api', 'TwitterController@getAll')->name('api');
-Route::get('/api/twitter/all', 'TwitterController@showTweets')->name('apiAll');
-Route::get('/api/twitter/search', 'TwitterController@searchAll')->name('apiSearch');
+//// routes for talking with api
+//Route::get('/api', 'TwitterController@getAll')->name('api');
+//Route::get('/api/twitter/all', 'TwitterController@showTweets')->name('apiAll');
+//Route::get('/api/twitter/search', 'TwitterController@searchAll')->name('apiSearch');
 
