@@ -37,8 +37,45 @@ body {
 }
 
 #app {
-    min-height: 100vh;
-    width: 100vw;
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 128px;
+}
+
+#feed {
+  min-height: 100vh;
+}
+
+#loader {
+  $size: 32px;
+  position: relative;
+  top: $size;
+  display: block;
+  text-align: center;
+
+  &::after {
+    content: '';
+    height: $size;
+    width: $size;
     position: absolute;
-    top: 128px;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 16px;
+    margin: 16px auto;
+    border: 2px #222 solid;
+    border-left-color: transparent;
+    border-radius: 100%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
 }

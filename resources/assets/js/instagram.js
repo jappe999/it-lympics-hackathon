@@ -25,7 +25,7 @@ const app = new Vue({
       getFeed() {
         this.loading = true
 
-        let url = this.next_url ? `/api/twitter/${this.next_url}` : 'api/twitter/all'
+        let url = this.next_url ? `/api/instagram/${this.next_url}` : 'api/instagram/all'
 
         axios.get(url)
         .then(response => {

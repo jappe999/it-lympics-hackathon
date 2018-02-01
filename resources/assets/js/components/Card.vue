@@ -7,9 +7,13 @@
         </div>
 
         <div class="card__tags d-flex flex-wrap flex-row px-5 pb-4 justify-content-end"  v-if="card.tags">
-            <div class="tag position-relative bg-dark-blue color-white pr-3 pl-4 py-1 rounded" v-for="tag of card.tags">
+            <div class="tag position-relative bg-dark-blue color-white ml-2 mt-2 pr-3 pl-4 py-1 rounded" v-for="tag of card.tags">
                 {{ tag.text }}
             </div>
+        </div>
+
+        <div class="float-right px-5" v-if="card.url">
+            <a :href="card.url">Bekijk originele tweet</a>
         </div>
 
         <!-- For optional extra content -->
