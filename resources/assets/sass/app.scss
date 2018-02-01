@@ -1,9 +1,81 @@
-
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import "fonts";
 
 // Variables
 @import "variables";
+@import "colors";
+@import "menu_icon";
+@import "anchors";
+@import "cards";
 
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+html,
+body {
+  overflow-x: hidden;
+  font-family: $default-font;
+  background-color: #f0f0f0
+}
+
+#header,
+#sidebar {
+  background-color: white;
+}
+
+#header {
+  z-index: 20;
+  box-shadow: 0 0 64px 0 $color-light-grey;
+
+  .navbar-brand {
+    img {
+      max-height: 64px;
+    }
+  }
+}
+
+#sidebar {
+  z-index: 10;
+  box-shadow: -64px 0 64px -64px $color-light-grey;
+}
+
+#app {
+  min-height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 128px;
+}
+
+#feed {
+  min-height: 100vh;
+}
+
+#loader {
+  $size: 32px;
+  position: relative;
+  top: $size;
+  display: block;
+  text-align: center;
+
+  &::after {
+    content: '';
+    height: $size;
+    width: $size;
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 16px;
+    margin: 16px auto;
+    border: 2px #222 solid;
+    border-left-color: transparent;
+    border-radius: 100%;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}

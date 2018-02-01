@@ -1,0 +1,10 @@
+a {
+  font-family: $default-font;
+  color: $color-dark-blue;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
