@@ -4,7 +4,6 @@ const app = new Vue({
     el: '#app',
     data: {
       loading: false,
-      watcher: null,
       feed: [],
       next_url: ''
     },
@@ -14,10 +13,10 @@ const app = new Vue({
     methods: {
       watchBottom() {
         let endFeed = document.getElementById('endfeed')
-        this.watcher = scrollMonitor.create(endFeed)
+        let watcher = scrollMonitor.create(endFeed)
         let vm = this
 
-        this.watcher.enterViewport(function () {
+        watcher.enterViewport(function () {
           if (!vm.loading) {
             vm.getFeed()
           }
@@ -26,7 +25,7 @@ const app = new Vue({
       getFeed() {
         this.loading = true
 
-        let url = this.next_url ? `/api/twitter/${this.next_url}` : 'api/twitter/all'
+        let url = this.next_url ? `/api/instagram/${this.next_url}` : 'api/instagram/all'
 
         axios.get(url)
         .then(response => {
@@ -41,7 +40,6 @@ const app = new Vue({
             }
 
             this.parseFeed(response.data)
-            this.watcher.recalculateLocation()
           }
 
           this.loading = false

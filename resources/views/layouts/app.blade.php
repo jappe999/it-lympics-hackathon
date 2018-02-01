@@ -47,6 +47,25 @@
                 </div>
             </navbar>
 
+
+            <sidebar :open="menuOpen">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/gallery">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="/datetype">Datetype</a>
+                    </li>
+                    <li>
+                        <a href="/api">Api</a>
+                    </li>
+                </ul>
+            </sidebar>
+
+
             <sidebar :open="menuOpen" class="pt-4 d-md-none">
                 <div class="px-5 py-3 my-auto">
                     <a href="/about" class="color-black">
@@ -58,6 +77,7 @@
                         </small>
                     </a>
                 </div>
+
 
                 @include('layouts.navigation', [ 'direction' => 'column' ])
             </sidebar>

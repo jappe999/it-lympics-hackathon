@@ -46,7 +46,7 @@ return [
 
         'file' => [
             'driver' => 'file',
-            'path' => storage_path('framework/cache/data'),
+            'path' => sys_get_temp_dir(),
         ],
 
         'memcached' => [

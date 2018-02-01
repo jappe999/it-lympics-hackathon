@@ -9,7 +9,13 @@
         <card :card="{ 'image': '/img/about.jpg' }">
             <div class="col-12 px-5 py-4">
                 <h2>De app</h2>
-                <p>Wat doet ie eigenlijk?</p>
+                <p>
+                    In deze webapp wordt er, met behulp van hashtags, Twitter berichten opgehaald.
+                    Op de webapp kunnen deze berichten gelezen worden.
+                </p>
+                <p>
+                    Ook is er een easteregg in de applicatie te vinden. succes met zoeken! (Rudy bedankt).
+                </p>
             </div>
         </card>
 
@@ -42,7 +48,9 @@
         <card :card="{ 'image': '/img/about.jpg' }">
             <div class="col-12 px-5 py-4">
                 <h2>Het team</h2>
-                <p></p>
+                <p>
+                    Team Packet bestaat uit vier leden, Yorick en Jasper van de AD opleiding Software Development en Sven en Caroline van de HBO-ICT opleiding.
+                </p>
             </div>
         </card>
     </div>

@@ -28,6 +28,6 @@ return [
     |
     */
 
-    'compiled' => realpath(storage_path('framework/views')),
+    'compiled' => sys_get_temp_dir(),
 
 ];

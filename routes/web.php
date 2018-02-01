@@ -11,16 +11,9 @@
 |
 */
 
-
-Route::get('/', 'galleryController@home')->name('home');
-
-// route for the gallery
-Route::get('/gallery', 'galleryController@index')->name('gallery');
-
-// route for the gallery
-Route::get('/datetype', 'datetypeController@index')->name('datetype');
-
-Route::get('/RudyIsEenHeld', 'galleryController@theLegend')->name('theLegend');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/about', 'HomeController@about');
+Route::get('/RudyIsEenHeld', 'HomeController@TheLegend')->name('theLegend');
 
 //Route::get('/api', 'apiController@index')->name('api');
 
@@ -28,3 +21,7 @@ Route::get('/RudyIsEenHeld', 'galleryController@theLegend')->name('theLegend');
 Route::get('/api/twitter', 'TwitterController@query')->name('api');
 Route::get('/api/twitter/all', 'TwitterController@showTweets')->name('apiAll');
 Route::get('/api/twitter/search', 'TwitterController@searchAll')->name('apiSearch');
+
+Route::get('/api/instagram', 'InstagramController@getAll')->name('instagram');
+Route::get('/api/instagram/all', 'InstagramController@showTweets')->name('instagramAll');
+Route::get('/api/instagram/search', 'InstagramController@searchAll')->name('instagramSearch');

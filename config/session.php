@@ -57,7 +57,7 @@ return [
     |
     */
 
-    'files' => storage_path('framework/sessions'),
+    'files' => sys_get_temp_dir(),
 
     /*
     |--------------------------------------------------------------------------
