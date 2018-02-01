@@ -11,20 +11,9 @@
 |
 */
 
-
-
-
-
-
 Route::get('/', 'HomeController@index')->name('home');
-
-// route for the gallery
-Route::get('/gallery', 'galleryController@index')->name('gallery');
-
-// route for the gallery
-Route::get('/datetype', 'datetypeController@index')->name('datetype');
-
-Route::get('/RudyIsEenHeld', 'galleryController@theLegend')->name('theLegend');
+Route::get('/about', 'HomeController@about');
+Route::get('/RudyIsEenHeld', 'HomeController@TheLegend')->name('theLegend');
 
 //Route::get('/api', 'apiController@index')->name('api');
 
@@ -36,11 +25,3 @@ Route::get('/api/twitter/search', 'TwitterController@searchAll')->name('apiSearc
 Route::get('/api/instagram', 'instagramController@getAll')->name('instagram');
 Route::get('/api/instagram/all', 'instagramController@showTweets')->name('instagramAll');
 Route::get('/api/instagram/search', 'instagramController@searchAll')->name('instagramSearch');
-
-//Route::get('/', function () {
-//    return view('home');
-//});
-
-Route::get('/about', function () {
-    return view('about');
-});

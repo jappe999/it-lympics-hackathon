@@ -65,10 +65,5 @@ class TwitterController extends Controller
         $query = urlencode($query);
 
         return (array) $this->twitter->search_tweets("q=$query&tweet_mode=extended", true);
-
-    }
-    public function searchAll()
-    {
-        //query to search for tweets
     }
 }
